@@ -78,49 +78,6 @@
             border-radius: 28px;
         }
 
-        .photo-placeholder {
-            flex: 1 1 280px;
-            min-width: 240px;
-            aspect-ratio: 1/1.2;
-            background: linear-gradient(145deg, #eae5dd, #d6cfc4);
-            border-radius: 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #5f5346;
-            border: 3px dashed #b3a392;
-            box-shadow: inset 0 2px 10px rgba(0,0,0,0.03);
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .photo-placeholder svg {
-            width: 64px;
-            height: 64px;
-            margin-bottom: 1rem;
-            opacity: 0.7;
-            fill: none;
-            stroke: #7b6e60;
-            stroke-width: 1.5;
-        }
-
-        .photo-placeholder p {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #7a6b5c;
-            border-top: 1px solid #b9ad9e;
-            padding-top: 0.8rem;
-            width: 100%;
-        }
-
-        .photo-caption {
-            font-style: italic;
-            font-size: 0.95rem;
-            color: #5f554b;
-            margin-top: 0.5rem;
-        }
 
         .quick-info {
             flex: 2 1 300px;
@@ -267,18 +224,18 @@
             </div>
         </div>
 
-        <!-- МЕСТО ПОД ФОТО (заглушка) + небольшой очерк -->
+        <!-- ****************************************************************** -->
+        <!-- ***  ЭТО ГЛАВНЫЙ БЛОК С ФОТО - СЮДА ВСТАВЛЯТЬ ВАШ ТЕГ <img>    *** -->
+        <!-- ****************************************************************** -->
         <div class="photo-section">
-            <div class="photo-placeholder">
-                <!-- стилизованное место под фото, можно заменить на <img> -->
-                <svg viewBox="0 0 100 100" width="70" height="70">
-                    <circle cx="50" cy="40" r="18" stroke="currentColor" stroke-width="2" fill="#d9d0c5" />
-                    <path d="M22 75 Q 50 95, 78 75" stroke="currentColor" stroke-width="2.5" fill="#d9d0c5" fill-opacity="0.4" />
-                    <path d="M30 45 Q 50 55, 70 45" stroke="currentColor" stroke-width="1.5" fill="none" />
-                </svg>
-                <p>Здесь будет фото</p>
-                <span class="photo-caption">(место для семейного портрета)</span>
-            </div>
+            
+            <!-- ========== ВОТ ЗДЕСЬ ВСТАВЬТЕ ЭТУ СТРОКУ ========== -->
+            <!-- === УДАЛИТЕ ВСЁ, ЧТО МЕЖДУ ЭТИМИ КОММЕНТАРИЯМИ, И ВСТАВЬТЕ СТРОКУ НИЖЕ === -->
+            
+            <img src="photo.jpg" alt="Урусова Тамара" style="flex: 1 1 280px; min-width: 240px; max-width: 320px; height: auto; border-radius: 24px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 4px solid white; object-fit: cover; aspect-ratio: 1/1.2;">
+            
+            <!-- ========== КОНЕЦ ВСТАВКИ ========== -->
+            
             <div class="quick-info">
                 <p>Тамара — имя, которое для близких звучало теплом и заботой. Она прожила долгую, наполненную событиями жизнь, оставаясь в сердцах родных и друзей.</p>
                 <div class="quote">«Светлый человек, хранительница традиций и душа любой компании» — так вспоминают Тамару все, кто имел счастье её знать.</div>
@@ -322,22 +279,11 @@
             </div>
         </div>
 
-        <!-- Дополнительная информация (место для эпитафии или стихов) -->
+        <!-- Дополнительная информация -->
         <div class="memory-footnote">
             <p>«Не зарастёт тропа к вашему сердцу. Спите спокойно, дорогая Тамара.»</p>
             <small>— семья Урусовых, друзья и все, кто помнит.</small>
         </div>
-
-        <!-- маленький PS: указание, что фото можно загрузить -->
-        <div style="margin-top: 1.8rem; font-size: 0.85rem; color: #b2a495; text-align: right; border-top: 1px dotted #d4cbbc; padding-top: 1rem;">
-            <span>🌹 Здесь могла бы быть ваша фотография — замените placeholder на тег &lt;img&gt; с реальным снимком.</span>
-        </div>
     </div>
-
-    <!-- простой комментарий для потомков: как вставить фото -->
-    <!--
-        Инструкция: замените div с классом "photo-placeholder" на:
-        <img src="путь_к_фото.jpg" alt="Урусова Тамара" style="width:100%; max-width:320px; border-radius:24px; box-shadow: ...">
-    -->
 </body>
 </html>
