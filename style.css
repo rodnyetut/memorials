@@ -1,204 +1,261 @@
-   * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            background-color: #faf8f5;
-            color: #2c2c2c;
-            line-height: 1.6;
-            padding: 2rem 1rem;
-        }
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #faf8f5;
+    color: #2c2c2c;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border-radius: 20px;
-            overflow: hidden;
-            padding: 2.5rem 2rem;
-            border: 1px solid #e0dcd5;
-        }
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 2.5rem 2rem;
+    border: 1px solid #e0dcd5;
+}
 
-        /* заголовок памяти */
-        .memory-header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            border-bottom: 1px dashed #c9c3b5;
-            padding-bottom: 1.5rem;
-        }
+/* заголовок памяти */
+.memory-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px dashed #c9c3b5;
+    padding-bottom: 1.5rem;
+}
 
-        .memory-header h1 {
-            font-size: 3rem;
-            letter-spacing: 1px;
-            font-weight: 400;
-            color: #3e362e;
-            margin-bottom: 0.5rem;
-            font-family: 'Palatino', 'Georgia', serif;
-        }
+.memory-header h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #3e362e;
+    margin-bottom: 0.5rem;
+    font-family: 'Palatino', 'Georgia', serif;
+}
 
-        .memory-header h1 span {
-            font-size: 2.2rem;
-            color: #7f6e5f;
-            display: block;
-            margin-top: 0.25rem;
-            font-style: italic;
-            font-weight: 300;
-        }
+.memory-header h1 span {
+    font-size: 2.2rem;
+    color: #7f6e5f;
+    display: block;
+    margin-top: 0.25rem;
+    font-style: italic;
+    font-weight: 300;
+}
 
-        .dates {
-            font-size: 1.2rem;
-            color: #8b7a6b;
-            background: #f0ece6;
-            display: inline-block;
-            padding: 0.3rem 2rem;
-            border-radius: 40px;
-            margin-top: 0.8rem;
-        }
+.dates {
+    font-size: 1.2rem;
+    color: #8b7a6b;
+    background: #f0ece6;
+    display: inline-block;
+    padding: 0.3rem 2rem;
+    border-radius: 40px;
+    margin-top: 0.8rem;
+}
 
-        /* место под фото + краткая информация */
-        .photo-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2.5rem;
-            margin-bottom: 3rem;
-            align-items: center;
-            background: #fcfaf7;
-            padding: 1.5rem;
-            border-radius: 28px;
-        }
+/* место под фото + краткая информация */
+.photo-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+    align-items: center;
+    background: #fcfaf7;
+    padding: 1.5rem;
+    border-radius: 28px;
+}
 
+/* стили для фото, если вставите img */
+.photo-section img {
+    flex: 1 1 280px;
+    min-width: 240px;
+    max-width: 320px;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: 4px solid white;
+    object-fit: cover;
+    aspect-ratio: 1/1.2;
+}
 
-        .quick-info {
-            flex: 2 1 300px;
-        }
+/* плейсхолдер для фото (заглушка) */
+.photo-placeholder {
+    flex: 1 1 280px;
+    min-width: 240px;
+    aspect-ratio: 1/1.2;
+    background: linear-gradient(145deg, #eae5dd, #d6cfc4);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #5f5346;
+    border: 3px dashed #b3a392;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.03);
+    padding: 1.5rem;
+    text-align: center;
+}
 
-        .quick-info p {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            border-left: 4px solid #d9c8b8;
-            padding-left: 1.5rem;
-            color: #3f3a35;
-        }
+.photo-placeholder svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+    fill: none;
+    stroke: #7b6e60;
+    stroke-width: 1.5;
+}
 
-        .quick-info .quote {
-            font-style: italic;
-            color: #6a5e53;
-            font-size: 1.1rem;
-            background: #f3efe9;
-            padding: 1rem 1.8rem;
-            border-radius: 50px 20px 20px 50px;
-        }
+.photo-placeholder p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #7a6b5c;
+    border-top: 1px solid #b9ad9e;
+    padding-top: 0.8rem;
+    width: 100%;
+}
 
-        /* биография с хронологией */
-        .bio-title {
-            font-size: 2rem;
-            font-weight: 350;
-            margin: 2rem 0 1.5rem 0;
-            color: #4d4137;
-            border-bottom: 1px solid #ddd6cd;
-            padding-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+.photo-caption {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #5f554b;
+    margin-top: 0.5rem;
+}
 
-        .bio-title:before {
-            content: "⚘";
-            font-size: 2rem;
-            color: #b19682;
-        }
+.quick-info {
+    flex: 2 1 300px;
+}
 
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
+.quick-info p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #d9c8b8;
+    padding-left: 1.5rem;
+    color: #3f3a35;
+}
 
-        .timeline-item {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: baseline;
-            background: #fefcf9;
-            padding: 1rem 1.5rem;
-            border-radius: 40px 12px 12px 40px;
-            transition: background 0.2s;
-            border: 1px solid #ede7df;
-        }
+.quick-info .quote {
+    font-style: italic;
+    color: #6a5e53;
+    font-size: 1.1rem;
+    background: #f3efe9;
+    padding: 1rem 1.8rem;
+    border-radius: 50px 20px 20px 50px;
+}
 
-        .timeline-item:hover {
-            background: #f8f3ec;
-            border-color: #cfc0b2;
-        }
+/* биография с хронологией */
+.bio-title {
+    font-size: 2rem;
+    font-weight: 350;
+    margin: 2rem 0 1.5rem 0;
+    color: #4d4137;
+    border-bottom: 1px solid #ddd6cd;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-        .timeline-year {
-            font-size: 1.8rem;
-            font-weight: 600;
-            min-width: 120px;
-            color: #946b51;
-            letter-spacing: 1px;
-            font-family: 'Courier New', monospace;
-            opacity: 0.9;
-            padding-right: 1.5rem;
-        }
+.bio-title:before {
+    content: "⚘";
+    font-size: 2rem;
+    color: #b19682;
+}
 
-        .timeline-desc {
-            flex: 1;
-            font-size: 1.15rem;
-            color: #2e2a26;
-            line-height: 1.5;
-        }
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
 
-        .timeline-desc strong {
-            color: #7c6050;
-            font-weight: 600;
-        }
+.timeline-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    background: #fefcf9;
+    padding: 1rem 1.5rem;
+    border-radius: 40px 12px 12px 40px;
+    transition: background 0.2s;
+    border: 1px solid #ede7df;
+}
 
-        /* дополнительный раздел — воспоминания */
-        .memory-footnote {
-            margin-top: 3rem;
-            background: #f0eae2;
-            padding: 1.8rem 2rem;
-            border-radius: 50px 8px 50px 8px;
-            text-align: center;
-            border: 1px solid #d9cdc0;
-        }
+.timeline-item:hover {
+    background: #f8f3ec;
+    border-color: #cfc0b2;
+}
 
-        .memory-footnote p {
-            font-size: 1.25rem;
-            font-style: italic;
-            color: #4d443b;
-            max-width: 700px;
-            margin: 0 auto 1rem auto;
-        }
+.timeline-year {
+    font-size: 1.8rem;
+    font-weight: 600;
+    min-width: 120px;
+    color: #946b51;
+    letter-spacing: 1px;
+    font-family: 'Courier New', monospace;
+    opacity: 0.9;
+    padding-right: 1.5rem;
+}
 
-        .memory-footnote small {
-            color: #988c7f;
-        }
+.timeline-desc {
+    flex: 1;
+    font-size: 1.15rem;
+    color: #2e2a26;
+    line-height: 1.5;
+}
 
-        /* адаптация под мобильные */
-        @media (max-width: 650px) {
-            .container {
-                padding: 1.5rem 1rem;
-            }
-            .memory-header h1 {
-                font-size: 2.2rem;
-            }
-            .timeline-item {
-                flex-direction: column;
-                border-radius: 28px;
-            }
-            .timeline-year {
-                min-width: auto;
-                padding-right: 0;
-                margin-bottom: 0.3rem;
-                font-size: 1.6rem;
-            }
-            .photo-section {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
+.timeline-desc strong {
+    color: #7c6050;
+    font-weight: 600;
+}
+
+/* дополнительный раздел — воспоминания */
+.memory-footnote {
+    margin-top: 3rem;
+    background: #f0eae2;
+    padding: 1.8rem 2rem;
+    border-radius: 50px 8px 50px 8px;
+    text-align: center;
+    border: 1px solid #d9cdc0;
+}
+
+.memory-footnote p {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #4d443b;
+    max-width: 700px;
+    margin: 0 auto 1rem auto;
+}
+
+.memory-footnote small {
+    color: #988c7f;
+}
+
+/* адаптация под мобильные */
+@media (max-width: 650px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+    .memory-header h1 {
+        font-size: 2.2rem;
+    }
+    .timeline-item {
+        flex-direction: column;
+        border-radius: 28px;
+    }
+    .timeline-year {
+        min-width: auto;
+        padding-right: 0;
+        margin-bottom: 0.3rem;
+        font-size: 1.6rem;
+    }
+    .photo-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
