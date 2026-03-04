@@ -22,7 +22,7 @@
             width: 100%;
             height: auto;
             display: block;
-            aspect-ratio: 16/9; /* Стандартное соотношение сторон */
+            aspect-ratio: 16/9;
             object-fit: cover;
         }
         
@@ -32,6 +32,16 @@
             margin-top: 0.5rem;
             font-style: italic;
             text-align: center;
+        }
+        
+        /* Стиль для кликабельного QR-кода */
+        .qr-code {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .qr-code:hover {
+            transform: scale(1.1);
         }
         
         /* Для мобильных устройств */
@@ -84,11 +94,11 @@
                 <div class="timeline-desc"><strong>Дедушка Алексей (Капустин).</strong> В годы гонений на церковь дед тайно служил, причащал людей. Тамара помогала ему читать на церковно-славянском. По его молитвам девочка исцелилась от тяжёлой болезни.</div>
             </div>
             
-            <!-- ВИДЕО: 1943 -->
+            <!-- ВИДЕО: 1943 (автовоспроизведение + зациклено) -->
             <div class="timeline-item" style="flex-direction: column; align-items: stretch; padding: 1.5rem;">
                 <div class="timeline-year" style="margin-bottom: 0.5rem;">🎬 1943</div>
                 <div class="video-container">
-                    <video loop muted playsinline controls preload="metadata">
+                    <video autoplay loop muted playsinline preload="auto">
                         <source src="1943.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -101,11 +111,11 @@
                 <div class="timeline-desc"><strong>Первый брак в Омске.</strong> Был заключён не по воле Тамары. Прожив недолго, уехала в Берёзовск, затем в Вологду.</div>
             </div>
             
-            <!-- ВИДЕО: 1961 -->
+            <!-- ВИДЕО: 1961 (автовоспроизведение + зациклено) -->
             <div class="timeline-item" style="flex-direction: column; align-items: stretch; padding: 1.5rem;">
                 <div class="timeline-year" style="margin-bottom: 0.5rem;">🎬 1961</div>
                 <div class="video-container">
-                    <video loop muted playsinline controls preload="metadata">
+                    <video autoplay loop muted playsinline preload="auto">
                         <source src="1961.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -118,11 +128,11 @@
                 <div class="timeline-desc"><strong>Второй брак.</strong> На танцах в клубе Кувшинова познакомилась с Эдуардом из деревни Обросово. Мать Эдуарда, Илария, благословила невестку иконой от священноисповедника Александра (Орлова).</div>
             </div>
             
-            <!-- ВИДЕО: 1980 -->
+            <!-- ВИДЕО: 1980 (автовоспроизведение + зациклено) -->
             <div class="timeline-item" style="flex-direction: column; align-items: stretch; padding: 1.5rem;">
                 <div class="timeline-year" style="margin-bottom: 0.5rem;">🎬 1980</div>
                 <div class="video-container">
-                    <video loop muted playsinline controls preload="metadata">
+                    <video autoplay loop muted playsinline preload="auto">
                         <source src="1980.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -173,11 +183,26 @@
         </div>
     </div>
  
-    <!-- QR-код -->
+    <!-- QR-код с возможностью скачивания -->
     <div style="position: fixed; bottom: 20px; right: 20px; background: white; padding: 10px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); border: 2px solid #f0eae2; z-index: 100;">
-        <img src="cod.png" alt="QR-код" style="width: 80px; height: 80px; display: block;">
-        <p style="font-size: 0.7rem; text-align: center; margin-top: 5px;">память</p>
+        <img src="cod.png" alt="QR-код" class="qr-code" style="width: 80px; height: 80px; display: block;" onclick="downloadQR()">
+        <p style="font-size: 0.7rem; text-align: center; margin-top: 5px;">👆 нажмите, чтобы скачать</p>
     </div>
+    
+    <script>
+        // Функция для скачивания QR-кода
+        function downloadQR() {
+            const link = document.createElement('a');
+            link.href = 'cod.png';
+            link.download = 'QR-код-память.png'; // имя файла при скачивании
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Небольшое уведомление (не обязательно)
+            alert('QR-код скачивается...');
+        }
+    </script>
     
     <script src="script.js"></script>
 </body>
