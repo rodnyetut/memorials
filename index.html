@@ -6,6 +6,42 @@
     <title>Памяти Урусовой Тамары Павловны</title>
     <!-- ПОДКЛЮЧАЕМ ВНЕШНИЙ CSS ФАЙЛ -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Дополнительные стили для видео */
+        .video-container {
+            width: 100%;
+            margin: 1rem 0 1.5rem 0;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 3px solid white;
+            background: #000;
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16/9; /* Стандартное соотношение сторон */
+            object-fit: cover;
+        }
+        
+        .video-caption {
+            font-size: 0.9rem;
+            color: #8b7a6b;
+            margin-top: 0.5rem;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        /* Для мобильных устройств */
+        @media (max-width: 650px) {
+            .video-container {
+                border-radius: 16px;
+                border-width: 2px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -22,11 +58,11 @@
 
         <!-- Блок с фото и краткой информацией -->
         <div class="photo-section">
-         <img src="photo1.jpg" alt="Урусова Тамара Павловна" class="photo"> 
+            <img src="photo1.jpg" alt="Урусова Тамара Павловна" class="photo"> 
           
-                <div class="quick-info">
+            <div class="quick-info">
                 <p>Тамара Павловна, в девичестве Баранова, в замужестве Андрианова, Урусова.</p>
-                    <div class="quote">«Светлый, добрый, гостеприимный человек, хранительница традиций, рукодельница» — так вспоминают Тамару все, кто имел счастье её знать.</div>
+                <div class="quote">«Светлый, добрый, гостеприимный человек, хранительница традиций, рукодельница» — так вспоминают Тамару все, кто имел счастье её знать.</div>
             </div>
         </div>
 
@@ -35,61 +71,85 @@
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-year">1938</div>
-                <div class="timeline-desc"><strong>Рождение.</strong> Родилась 4 декабря в селе Тины Нижне-Ингашского района Красноярского края.В разные годы жила в Преображенке, Омске, Вологде и Санкт-Петербурге.</div>
+                <div class="timeline-desc"><strong>Рождение.</strong> Родилась 4 декабря в селе Тины Нижне-Ингашского района Красноярского края. В разные годы жила в Преображенке, Омске, Вологде и Санкт-Петербурге.</div>
             </div>
+            
             <div class="timeline-item">
                 <div class="timeline-year">1943</div>
                 <div class="timeline-desc"><strong>Переезд к бабушке и дедушке.</strong> В марте мать привезла Тамару в село Преображенку. После смерти матери в декабре туда же привезли сестру Марию. Сёстры Вера и Надежда остались в Омске с отцом.</div>
             </div>
+            
             <div class="timeline-item">
                 <div class="timeline-year">1943-50-е</div>
                 <div class="timeline-desc"><strong>Дедушка Алексей (Капустин).</strong> В годы гонений на церковь дед тайно служил, причащал людей. Тамара помогала ему читать на церковно-славянском. По его молитвам девочка исцелилась от тяжёлой болезни.</div>
             </div>
-                <div class="timeline-item">
+            
+            <!-- ВИДЕО: 1943 -->
+            <div class="timeline-item" style="flex-direction: column; align-items: stretch; padding: 1.5rem;">
+                <div class="timeline-year" style="margin-bottom: 0.5rem;">🎬 1943</div>
+                <div class="video-container">
+                    <video loop muted playsinline controls preload="metadata">
+                        <source src="1943.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+                <div class="video-caption">🎞️ Кадры семейного архива</div>
+            </div>
+            
+            <div class="timeline-item">
                 <div class="timeline-year">1950-60-е</div>
-                 <div style="margin: 1.5rem 0; text-align: center;">
-        <video width="100%" height="auto" controls style="border-radius: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); border: 3px solid white;">
-            <source src="1943.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-        <p style="font-size: 0.9rem; color: #8b7a6b; margin-top: 0.5rem; font-style: italic;">🎬 Видео из семейного архива</p>
-    </div>
                 <div class="timeline-desc"><strong>Первый брак в Омске.</strong> Был заключён не по воле Тамары. Прожив недолго, уехала в Берёзовск, затем в Вологду.</div>
             </div>
+            
+            <!-- ВИДЕО: 1961 -->
+            <div class="timeline-item" style="flex-direction: column; align-items: stretch; padding: 1.5rem;">
+                <div class="timeline-year" style="margin-bottom: 0.5rem;">🎬 1961</div>
+                <div class="video-container">
+                    <video loop muted playsinline controls preload="metadata">
+                        <source src="1961.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+                <div class="video-caption">🎞️ Воспоминания о молодости</div>
+            </div>
+            
             <div class="timeline-item">
                 <div class="timeline-year">1961-62-е</div>
-                 <div style="margin: 1.5rem 0; text-align: center;">
-        <video width="100%" height="auto" controls style="border-radius: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); border: 3px solid white;">
-            <source src="1961.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-        <p style="font-size: 0.9rem; color: #8b7a6b; margin-top: 0.5rem; font-style: italic;">🎬 Видео из семейного архива</p>
-    </div>
-                <div class="timeline-desc"><strong>Второй брак</strong> На танцах в клубе Кувшинова познакомилась с Эдуардом из деревни Обросово. Мать Эдуарда, Илария, благословила невестку иконой от священноисповедника Александра (Орлова).</div>
+                <div class="timeline-desc"><strong>Второй брак.</strong> На танцах в клубе Кувшинова познакомилась с Эдуардом из деревни Обросово. Мать Эдуарда, Илария, благословила невестку иконой от священноисповедника Александра (Орлова).</div>
             </div>
-                <div class="timeline-item">
+            
+            <!-- ВИДЕО: 1980 -->
+            <div class="timeline-item" style="flex-direction: column; align-items: stretch; padding: 1.5rem;">
+                <div class="timeline-year" style="margin-bottom: 0.5rem;">🎬 1980</div>
+                <div class="video-container">
+                    <video loop muted playsinline controls preload="metadata">
+                        <source src="1980.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+                <div class="video-caption">🎞️ Семейные моменты</div>
+            </div>
+            
+            <div class="timeline-item">
                 <div class="timeline-year">1980</div>
-                 <div style="margin: 1.5rem 0; text-align: center;">
-        <video width="100%" height="auto" controls style="border-radius: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); border: 3px solid white;">
-            <source src="1980.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-        <p style="font-size: 0.9rem; color: #8b7a6b; margin-top: 0.5rem; font-style: italic;">🎬 Видео из семейного архива</p>
-    </div>
                 <div class="timeline-desc"><strong>Развод и переезд.</strong> Развелась с Эдуардом. Вышла замуж за Урусова Каюма Сабержаковича и переехала в Ленинград (Санкт-Петербург).</div>
             </div>
+            
             <div class="timeline-item">
                 <div class="timeline-year">1981</div>
-                <div class="timeline-desc"><strong>Болезнь и исцеление</strong> В Вологде заболела, врачи лечили от аллергии. В Ленинграде попала в больницу на Чёрной речке, узнала диагноз «онкология». Лечилась народными средствами — болезнь отступила.</div>
+                <div class="timeline-desc"><strong>Болезнь и исцеление.</strong> В Вологде заболела, врачи лечили от аллергии. В Ленинграде попала в больницу на Чёрной речке, узнала диагноз «онкология». Лечилась народными средствами — болезнь отступила.</div>
             </div>
+            
             <div class="timeline-item">
                 <div class="timeline-year">2001</div>
                 <div class="timeline-desc"><strong>Рак груди.</strong> Ампутация молочной железы.</div>
             </div>
+            
             <div class="timeline-item">
                 <div class="timeline-year">2003</div>
                 <div class="timeline-desc"><strong>Рак лёгких.</strong> Врачи не давали надежды, но Тамара Павловна собрала волю и прошла химиотерапию. В июне успела переоформить квартиру на дочь.</div>
             </div>
+            
             <div class="timeline-item">
                 <div class="timeline-year">2004</div>
                 <div class="timeline-desc"><strong>Кончина.</strong> 27 июня 2004 года Тамары Павловны не стало.</div>
@@ -99,8 +159,8 @@
         <!-- Дополнительный раздел: Мастерица и Икона -->
         <div class="bio-title">Память</div>
         <div style="margin-bottom: 2rem; background: #f9f6f2; padding: 1.5rem; border-radius: 24px;">
-            <p style="margin-bottom: 1rem;"><strong>Рукодельница</strong> Тамара умела шить, вязать и плести кружева. Сама ходила одетая «как с картинки», дочку Ирину наряжала как куколку. Шила по выкройкам из журналов «Работница» и «Крестьянка».</p>
-            </div>
+            <p style="margin-bottom: 1rem;"><strong>Рукодельница.</strong> Тамара умела шить, вязать и плести кружева. Сама ходила одетая «как с картинки», дочку Ирину наряжала как куколку. Шила по выкройкам из журналов «Работница» и «Крестьянка».</p>
+        </div>
 
         <!-- Дополнительная информация -->
         <div class="memory-footnote">
@@ -113,10 +173,12 @@
         </div>
     </div>
  
-<div style="position: fixed; bottom: 20px; right: 20px; background: white; padding: 10px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); border: 2px solid #f0eae2; z-index: 100;">
-    <img src="cod.png" alt="QR-код" style="width: 80px; height: 80px; display: block;">
-    <p style="font-size: 0.7rem; text-align: center; margin-top: 5px;">память</p>
-</div>
+    <!-- QR-код -->
+    <div style="position: fixed; bottom: 20px; right: 20px; background: white; padding: 10px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); border: 2px solid #f0eae2; z-index: 100;">
+        <img src="cod.png" alt="QR-код" style="width: 80px; height: 80px; display: block;">
+        <p style="font-size: 0.7rem; text-align: center; margin-top: 5px;">память</p>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
