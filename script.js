@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const years = Math.floor(diffDays / 365);
         const days = diffDays % 365;
         
-        counter.innerHTML = `✨ Прошло ${years} years и ${days} дней, но память жива... ✨`;
+        counter.innerHTML = `✨ Прошло ${years} years и ${days} days, но память жива... ✨`;
     }
     
     updateDaysCounter();
